@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Breast Cancer Detection</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    html, body {
+      height: 100%; /* Ensure the body takes full height */
+      width: 100%; /* Ensure the body takes full width */
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .container {
+      background-color: white;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      width: 90%; /* Use a percentage for responsiveness */
+      height: auto; /* Automatic height */
+      text-align: center;
+    }
+    h1 {
+      font-size: 28px;
+      color: #4CAF50;
+      margin-bottom: 10px;
+    }
+    h2 {
+      font-size: 20px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+    input[type="text"], input[type="password"] {
+      width: 100%;
+      padding: 12px; /* Padding to match the button */
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px; /* Rounded corners */
+      font-size: 16px;
+      transition: border 0.3s;
+    }
+    input[type="text"]:focus, input[type="password"]:focus {
+      border: 1px solid #4CAF50;
+      outline: none;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px;
+      width: 100%;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    .alt-signup {
+      margin-top: 15px;
+      color: #666;
+      font-size: 14px;
+    }
+    .alt-signup a {
+      color: #4CAF50;
+      text-decoration: none;
+    }
+    .alt-signup a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Breast Cancer Detection</h1>
+    <h2>Login / Sign Up</h2>
+    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+    <input type="password" id="age" name="password" placeholder="Enter your password" required> <!-- Changed to password -->
+    <button onclick="redirectToPatientDetails()">Proceed to Patient Details</button>
+    <div class="alt-signup">
+      <p>Or sign up with another account:</p>
+      <a href="#">Sign Up with Google</a>
+    </div>
+  </div>
+
+  <script>
+    function redirectToPatientDetails() {
+      const name = document.getElementById('name').value;
+      const password = document.getElementById('age').value; // Changed to password
+
+      if (name && password) {
+        window.location.href = `patient_details.html?name=${encodeURIComponent(name)}&password=${encodeURIComponent(password)}`; // Changed to password
+      } else {
+        alert('Please fill out your name and password!');
+      }
+    }
+  </script>
+</body>
+</html>
