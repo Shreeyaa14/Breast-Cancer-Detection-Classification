@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .signup-card {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 300px;
+      }
+
+      h1 {
+        color: #4CAF50;
+        text-align: center;
+      }
+
+      input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      button {
+        width: 100%;
+        padding: 10px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #45a049;
+      }
+
+      .links a {
+        color: #4CAF50;
+        text-decoration: none;
+        text-align: center;
+        display: block;
+        margin-top: 10px;
+      }
+
+      .links a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="signup-card">
+      <h1>Sign Up</h1>
+      <form action="submit_signup.html" method="post">
+        <input type="text" id="name" name="name" placeholder="Enter your name" required />
+        <input type="email" id="email" name="email" placeholder="Enter your email" required />
+        <input type="password" id="password" name="password" placeholder="Create a password" required />
+        <button type="submit">Create Account</button>
+      </form>
+      <div class="links">
+        <a href="index.html">Back to Login</a>
+      </div>
+    </div>
+  </body>
+</html>
