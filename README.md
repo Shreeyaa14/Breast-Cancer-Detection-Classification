@@ -1,4 +1,6 @@
 ## Breast Cancer Detection and Classification
+This project detects if the patient is diagnosed with the Breast Cancer or not, using the medical report of the patient. If Breast Cancer is detected, then the system classifies the type of Breast Cancer into Benign and Malignant the patient is affected by.
+
 
 Graphical Representation of the Results
 
